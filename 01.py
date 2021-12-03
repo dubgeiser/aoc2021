@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+
+answer = 0
+prev = -1
+win = []
+
+with open("./01-example.dat") as data:
+    for line in data:
+        depth = int(line)
+        if prev >= 0 and depth > prev:
+            answer += 1
+        prev = depth
+
+print(f"{answer=}")
