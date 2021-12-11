@@ -48,18 +48,12 @@ def test_movement():
 
 test_movement()
 
-fn = "02.dat"
 pos = (0, 0, 0)
-with open(fn) as data:
+with open("input") as data:
     for movement in data:
         op, delta = movement.split()
         delta = int(delta)
         op = globals()[op]
         pos = op(delta, pos)
 
-# Dumbass submitted answer from example data too many times already.
-prefix = ""
-if "example" in fn:
-    prefix = "EXAMPLE DATA!!!! "
-
-print(f"{prefix}{answer(pos)= }")
+print(f"{answer(pos)= }")

@@ -4,8 +4,7 @@
 def read_data_file(fn):
     return [int(i) for i in open(fn).readline().strip().split(",")]
 
-fn = "07.dat"
-positions = read_data_file(fn)
+positions = read_data_file("input")
 possible_positions = [i for i in range(min(positions), max(positions) + 1)]
 answer = 0
 

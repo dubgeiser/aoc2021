@@ -25,8 +25,7 @@ def islowpoint(heightmap, i, j):
     return True
 
 
-fn = '09.dat'
-heightmap = read_data_file(fn)
+heightmap = read_data_file("input")
 IMIN = JMIN = 0
 IMAX = len(heightmap) - 1
 JMAX = len(heightmap[0]) - 1

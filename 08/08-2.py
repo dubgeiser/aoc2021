@@ -78,8 +78,7 @@ def solve(ins: List, outs: List):
     return int("".join([str(i) for i in solution]))
 
 
-fn = '08.dat'
-displays = read_data_file(fn)
+displays = read_data_file("input")
 answer = 0
 for inputs, outputs in displays:
     answer += solve(inputs, outputs)

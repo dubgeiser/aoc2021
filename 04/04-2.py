@@ -91,8 +91,7 @@ def get_losing_board(boards: List[Board], draw: List[int]) -> Tuple[Board, int]:
 
 
 def main():
-    fn = "04.dat"
-    draw, boards = read_data_file(fn)
+    draw, boards = read_data_file("input")
     print(draw)
     board, nr = get_losing_board(boards, draw)
     print(f"Last board to win, with [{nr}]:")

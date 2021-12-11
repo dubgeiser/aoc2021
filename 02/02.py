@@ -35,7 +35,7 @@ def test_movement():
 test_movement()
 
 pos = (0, 0)
-with open("02.dat") as data:
+with open("input") as data:
     for movement in data:
         op, delta = movement.split()
         delta = int(delta)

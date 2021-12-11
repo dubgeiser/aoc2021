@@ -30,7 +30,7 @@ def test():
     assert '1' == epsilon_bit(list('000111100100'))
 
 
-    assert transform(read_data_file("03-example.dat")) == [
+    assert transform(read_data_file("sample")) == [
             tuple('011110011100'),
             tuple('010001010101'),
             tuple('111111110000'),
@@ -38,19 +38,14 @@ def test():
             tuple('000111100100'),
             ]
 
-fn = "03.dat"
 test()
-report = read_data_file(fn)
+report = read_data_file("input")
 t = transform(report)
 gamma_rate = ''
 epsilon_rate = ''
 for x in t:
     gamma_rate += gamma_bit(x)
     epsilon_rate += epsilon_bit(x)
+
 answer = int(gamma_rate, 2) * int(epsilon_rate, 2)
-
-prefix = ""
-if "example" in fn:
-    prefix = "EXAMPLE DATA!!!! "
-
-print(f"{prefix}{answer= }")
+print(f"{answer= }")

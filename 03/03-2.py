@@ -29,14 +29,8 @@ def transpose_reduce(l, bit_decider):
     return reduced[0]
 
 
-fn = "03.dat"
-report = read_data_file(fn)
+report = read_data_file("input")
 oxygen_generator_rating = int(transpose_reduce(report, most_common_bit), 2)
 co2_scrubber_rating = int(transpose_reduce(report, least_common_bit), 2)
 answer = oxygen_generator_rating * co2_scrubber_rating
-
-prefix = ""
-if "example" in fn:
-    prefix = "EXAMPLE DATA!!!! "
-
-print(f"{prefix}{answer= }")
+print(f"{answer= }")

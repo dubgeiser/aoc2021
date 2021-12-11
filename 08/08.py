@@ -10,8 +10,7 @@ def read_data_file(fn):
     return dashboard
 
 
-fn = '08.dat'
-data = [i[1] for i in read_data_file(fn)]
+data = [i[1] for i in read_data_file("input")]
 unique_segment_lengths = [2, 3, 4, 7]
 answer = 0
 

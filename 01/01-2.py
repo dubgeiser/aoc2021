@@ -4,7 +4,7 @@
 
 answer = 0
 
-with open("01.dat") as data:
+with open("input") as data:
     try:
         a = int(next(data))
         b = int(next(data))

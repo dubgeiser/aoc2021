@@ -103,8 +103,7 @@ def read_data_file(fn):
         return lines, Grid(minx, miny, maxx, maxy)
 
 
-fn = "05.dat"
-vents, grid = read_data_file(fn)
+vents, grid = read_data_file("input")
 for line in vents:
     grid.mark_line(line)
 print(f"{grid.get_overlap_count()= }")

@@ -93,8 +93,7 @@ def get_winning_board(boards: List[Board], draw: List[int]) -> Tuple[Board, int]
 
 
 def main():
-    fn = "04.dat"
-    draw, boards = read_data_file(fn)
+    draw, boards = read_data_file("input")
     print(draw)
     w = get_winning_board(boards, draw)
     if w[1] > -1:
