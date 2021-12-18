@@ -24,17 +24,6 @@ def read_data_file(fn):
     return template, insmap, letters
 
 
-def step0(template: list, insmap: dict):
-    for i, _ in enumerate(template):
-        print(f'{template = }')
-        pair = template[i] + template[i+1]
-        print(f"{i = }, {pair = }")
-        if pair in insmap.keys():
-            template = template[:i+1] + insmap[pair] + template[i+1:]
-        i += 2
-    return template
-
-
 def step(template: list, insmap: dict):
     pairs = []
     while len(template) > 1:
