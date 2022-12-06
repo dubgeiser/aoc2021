@@ -11,3 +11,7 @@ The stuff with sets might be replaced by bitshifting
 
 ## !!! 12 !!!
 This was naive and inefficient, there's bound to be a better way.
+
+## !!! 15 !!!
+Part 2 is inefficient due to the looping for incrementing, there's got to be a better way, something with whole division and modulo and what not
+Would be nice: Visualize actual path finding
